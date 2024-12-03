@@ -1,0 +1,267 @@
+hr {
+  width: 65%;
+  float: right;
+  margin-right: 5%;
+}
+
+.cartSection .cartShoesHead {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  height: fit-content;
+  padding: 2rem 5.8rem;
+  font-size: 1.5rem;
+  gap: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.cartSection .cartShoesHead .logoShoes {
+  width: 3rem;
+  height: 3rem;
+}
+
+.cartSection .cartShoesHead h1 {
+  color: #fff;
+  border-bottom: 1px solid #313131;
+}
+
+/* cart body of cartSection */
+.cartSection .cartBody {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartSection .cartBody .cartContainer {
+  width: 87%;
+  height: fit-content;
+  background-color: #ffffff;
+  border-radius: 1.3rem;
+  background: linear-gradient(135deg, #f1f1f1 8%, #e4d8d9 63%, #dfc9ca 20%);
+  margin: 1rem 0;
+}
+
+/* header section starts of cartBody here */
+.cartSection .cartBody .cartContainer .headerSection {
+  background: #202020;
+  padding: 0.5rem 2rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  margin: auto;
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border-bottom: 1px solid #ffffff; */
+  box-shadow: 0px 5px 5px #000;
+}
+
+.cartSection .cartBody .cartContainer .headerSection .heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #eff5fc;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(-6deg);
+  }
+  100% {
+    transform: rotate(6deg);
+  }
+}
+
+.cartSection .cartBody .cartContainer .headerSection .header-image {
+  width: 4rem;
+  height: 4rem;
+  animation: swing ease-in-out 1s infinite alternate;
+}
+/* header section ends here */
+
+/* cart items cards here */
+.cartSection .cartBody .cartContainer .cartItems {
+  margin: 2rem auto;
+  width: 90%;
+  height: 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cartSection .cartBody .cartContainer .cartItems .imageBox {
+  width: 15%;
+}
+
+.cartSection .cartBody .cartContainer .cartItems .imageBox #cartShoeImg {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  box-shadow: 0px 5px 10px #000;
+}
+
+.cartSection .cartBody .cartContainer .cartItems .imageBox #cartShoeImg:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+/* about section */
+.cartSection .cartBody .cartContainer .cartItems .about {
+  height: 100px;
+  width: 30%;
+}
+
+.cartSection .cartBody .cartContainer .cartItems .about .title {
+  padding-top: 0.2rem;
+  font-size: 2rem;
+  font-family: "Open Sans";
+  font-weight: 800;
+  color: #202020;
+}
+
+.cartSection .cartBody .cartContainer .cartItems .about .subtitle {
+  padding-top: 0.3rem;
+  font-size: 1rem;
+  font-family: "Open Sans";
+  font-weight: 600;
+  color: #909090;
+}
+
+/* prices section */
+.cartSection .cartBody .cartContainer .cartItems .price {
+  height: 100%;
+  text-align: right;
+}
+
+.cartSection .cartBody .cartContainer .cartItems .price .amount {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #202020;
+}
+
+.cartSection .cartBody .cartContainer .cartItems .price .remove {
+  border: none;
+  background-color: #b4161b;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+  border-radius: 0.5rem;
+  font-family: "Open Sans";
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+}
+
+.cartSection .cartBody .cartContainer .cartItems .price .remove:hover {
+  background: transparent;
+  color: #b4161b;
+  outline: 1px solid #b4161b;
+}
+/* cart items cards ends here */
+
+/* Checkout section here */
+.cartSection .cartBody .cartContainer .checkout {
+  float: right;
+  margin-right: 11%;
+  width: 48%;
+}
+
+.cartSection .cartBody .cartContainer .checkout .total {
+  padding-top: 0.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.cartSection .cartBody .cartContainer .checkout .total .totalAmount {
+  font-size: 2.2rem;
+  font-family: "Open Sans";
+  font-weight: 900;
+  color: #202020;
+}
+
+.cartSection .cartBody .cartContainer .checkout .total .button {
+  padding: 0.4rem 3rem;
+  margin: 0.8rem 0;
+  border: none;
+  background: linear-gradient(to bottom right, #36d1dc, #5b86e5);
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 2rem;
+  font-family: "Open Sans";
+  font-weight: 600;
+  color: #f7efef;
+  text-transform: uppercase;
+  box-shadow: 0px 5px 5px #000;
+}
+
+.cartSection .cartBody .cartContainer .checkout .total .button:hover {
+  background: transparent;
+  outline: 2px solid #000;
+  color: #000;
+  box-shadow: 0px 5px 5px #5b86e5;
+}
+/* Checkout section ends here */
+
+/* When cart is empty */
+.cartSection .cartBody .cartContainer #cartEmptyTitle {
+  width: 100%;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartSection .cartBody .cartContainer #cartEmptyTitle p {
+  padding: 0.5rem 0;
+  font-weight: bold;
+  color: cadetblue;
+}
+
+.cartSection .cartBody .cartContainer #cartEmptyTitle .buyBtn {
+  border: none;
+  background: #11e95b;
+  padding: 7px 20px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 7px;
+  cursor: pointer;
+  box-shadow: -10px 20px 15px -10px rgba(17, 233, 91, 0.3);
+  transition: 0.3s;
+}
+
+.cartSection .cartBody .cartContainer #cartEmptyTitle .buyBtn:hover {
+  background: #059136;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 650px) {
+  .cartSection .cartShoesHead {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    margin-bottom: 0;
+  }
+  .cartSection .cartBody .cartContainer .cartItems .about .title {
+    font-size: 1.2rem;
+  }
+  .cartSection .cartBody .cartContainer .cartItems .about .subtitle {
+    font-size: 0.7rem;
+    font-weight: 500;
+  }
+  .cartSection .cartBody .cartContainer .cartItems .price .remove {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.6rem;
+    font-weight: 300;
+  }
+  .cartSection .cartBody .cartContainer .checkout {
+    float: center;
+    margin-right: 5%;
+    width: 100%;
+  }
+}

@@ -1,0 +1,49 @@
+.featuredShoes .featuredShoesSpan {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  height: fit-content;
+  padding: 2rem 5.8rem;
+  font-size: 1.5rem;
+  gap: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.featuredShoes .featuredShoesSpan .logoShoesFeatured {
+  width: 3rem;
+  height: 3rem;
+}
+
+.featuredShoes .featuredShoesSpan h1 {
+  color: #fff;
+  border-bottom: 1px solid #313131;
+}
+
+.featuredShoes .buyNowSection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* media queries of buyNow Section */
+@media screen and (max-width: 650px) {
+  .featuredShoes .featuredShoesSpan {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    margin-bottom: 0;
+  }
+  .featuredShoes .featuredShoesSpan h1 {
+    font-size: 2rem;
+  }
+  .featuredShoes .buyNowSection {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 651px) and (max-width: 880px) {
+  .featuredShoes .buyNowSection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

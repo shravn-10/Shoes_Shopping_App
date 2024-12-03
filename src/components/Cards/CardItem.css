@@ -1,0 +1,222 @@
+.cardContainer {
+  width: 17.5rem;
+  height: 31.25rem;
+  margin: 1.875rem auto;
+}
+
+/* card here */
+.card {
+  border-radius: 1.563rem;
+  box-shadow: -11px 11px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* cardHead here*/
+.card .cardHead {
+  position: relative;
+  height: 15.75rem;
+  background: #e5e5e5;
+  border-radius: 25px 25px 0 0;
+}
+
+.card .cardHead .cardLogo {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px 25px 0 0;
+}
+
+.card .cardHead .cardLogo:hover {
+  transform: scale(1.1);
+  border-radius: 1.563rem;
+  transition: 0.3s ease-in-out;
+}
+/* cardHead ends here */
+
+/* cardBody here */
+.card .cardBody {
+  height: 15.938rem;
+  background: #fff;
+  border-radius: 0 0 25px 25px;
+}
+
+/* productDesc */
+.card .cardBody .productDesc .productTitle {
+  padding: 1.25rem 1.25rem 0.313rem 1.25rem;
+  display: block;
+  font-size: 1.063rem;
+  font-weight: 500;
+  letter-spacing: 0.063rem;
+  text-transform: uppercase;
+}
+
+.card .cardBody .productDesc .productTitle b {
+  font-weight: 900;
+  letter-spacing: 0rem;
+}
+
+.card .cardBody .productDesc .productTitle .badge {
+  position: relative;
+  font-size: 0.625rem;
+  font-weight: 700;
+  color: #fff;
+  background: #11e95b;
+  padding: auto 0.25rem;
+  border-radius: 0.25rem;
+  top: -0.125rem;
+  margin-left: 0.313rem;
+}
+
+.card .cardBody .productDesc .productCaption {
+  display: block;
+  padding: 0 1.25rem;
+  font-size: 0.625rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.card .cardBody .productDesc .productRating p {
+  padding: 0 1.25rem;
+  font-size: 0.75rem;
+  margin-top: 0.3rem;
+}
+/* productDesc ends here */
+
+/* product-properties */
+/* product size properties  here */
+.card .cardBody .productProperties .productSize h4 {
+  font-size: 0.063;
+  padding: 0 1.313rem;
+  margin-top: 0.938rem;
+  padding-bottom: 0.625rem;
+  text-transform: uppercase;
+}
+
+.card .cardBody .productProperties .productSize .ulSize {
+  margin-left: 0.938rem;
+}
+
+.card .cardBody .productProperties .productSize .ulSize li {
+  list-style: none;
+  float: left;
+  margin-right: 1.25rem;
+}
+
+.card .cardBody .productProperties .productSize .ulSize li a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 0.688rem;
+  width: 1.375rem;
+  height: 1.375rem;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 1.438rem;
+  color: #000;
+}
+
+.card .cardBody .productProperties .productSize .ulSize li a.active {
+  background: #f35e3d;
+  color: #fff;
+}
+
+.card .cardBody .productProperties .productSize .ulSize li a:hover {
+  background: #f35e3d;
+  color: #fff;
+}
+
+.card .cardBody .productProperties .productSize:before,
+.productSize:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* product size properties ends here */
+
+/* product color properties here */
+.card .cardBody .productProperties .productColor h4 {
+  font-size: 0.688rem;
+  padding: 0 1.313rem;
+  margin-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  text-transform: uppercase;
+}
+
+.card .cardBody .productProperties .productColor .ulColor {
+  margin-left: 1.688rem;
+}
+
+.card .cardBody .productProperties .productColor .ulColor li {
+  list-style: none;
+  float: left;
+  margin-right: 1.25rem;
+}
+
+.card .cardBody .productProperties .productColor .ulColor li a {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+}
+
+.card .cardBody .productProperties .productColor .ulColor li a.orange {
+  background: #f35e3d;
+}
+
+.card .cardBody .productProperties .productColor .ulColor li a.green {
+  background: #11e95b;
+}
+
+.card .cardBody .productProperties .productColor .ulColor li a.yellow {
+  background: #ffd414;
+}
+
+.card .cardBody .productProperties .productColor .ulColor li a.active:after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  border: 1px solid #f35e3d;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+  margin-left: -0.313rem;
+  margin-top: -0.313rem;
+}
+
+.card .cardBody .productProperties .productColor .ulColor li a:hover:after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  border: 1px solid #33302f;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+  margin-left: -0.313rem;
+  margin-top: -0.313rem;
+}
+
+/* Buy now button */
+.card .cardBody .productProperties .CardBuyBtn {
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  background: #11e95b;
+  padding: 0.438rem 1.25rem;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 0.438rem;
+  margin-top: -0.813rem;
+  margin-left: -0.313rem;
+  box-shadow: -10px 20px 15px -10px #11e95b4d;
+  transition: 0.3s;
+}
+
+.card .cardBody .productProperties .CardBuyBtn:hover {
+  background: #059136;
+}
+/* product color properties ends here */
+/* product-properties ends here */
+/* card body ends here */
+/* card ends here */
