@@ -3,12 +3,15 @@
   height: 100vh;
   display: grid;
   grid-template-columns: 2fr 3fr;
-  position: static;
+  position: relative; /* Changed from static */
   z-index: 1;
   max-width: 1250px;
   margin: 0 auto;
   padding: 0 1em;
+  background-color: transparent; /* Ensures a transparent background */
+  transform: none; /* Ensures no tilting effect */
 }
+
 
 /* left hero section here */
 .hero .leftHero {
@@ -69,8 +72,12 @@
 
 .hero .rightHero img {
   width: 40em;
-  transform: rotate(-25deg);
+  /*transform: rotate(-25deg);*/
+  margin-left: 150px;
+  margin-top: 100px;
   filter: drop-shadow(30px 45px 40px #161616);
+  background-color: transparent;
+  border: none;
   /* animation: swing ease-in-out 1s infinite alternate; */
 }
 
