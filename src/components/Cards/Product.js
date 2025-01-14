@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Cart from "../Cart/Cart";
 import BuyNow from "./BuyNow";
 import { toast } from "react-toastify";
@@ -7,73 +8,66 @@ import confetti from "canvas-confetti";
 
 const Product = () => {
   const [cartItem, setCartItem] = useState([]);
+  const navigate = useNavigate(); // Hook for navigation
 
-  // add in cart method
+  // Add to cart method
   const addInCart = (item) => {
     const isAlreadyAdded = cartItem.findIndex((array) => {
       return array.id === item.id;
     });
 
     if (isAlreadyAdded !== -1) {
-      //  checking if product is already in cart
       toast.error("🛒 Product is already in cart !", {
-        //toast message error
         position: "bottom-right",
         autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
         theme: "colored",
       });
       return;
     }
     setCartItem([...cartItem, item]);
     toast.info("🛒 Product added to Cart !", {
-      // toast message added to cart
       position: "bottom-right",
       autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
       theme: "colored",
     });
   };
 
-  // buy now method {as of now no payment integration so empties cart}
+  // Buy now method (redirects to billing page)
   const buyNow = () => {
-    setCartItem([]);
-    // canvas-confetti
+    if (cartItem.length === 0) {
+      toast.error("🛒 Cart is empty! Add products first.", {
+        position: "bottom-right",
+        autoClose: 2000,
+        theme: "colored",
+      });
+      return;
+    }
+
     confetti({
       particleCount: 350,
       spread: 80,
       origin: { y: 0.8 },
     });
-    toast.success("🚀 Purchased Complete !", {
+    toast.success("🚀 Redirecting to Billing Page!", {
       position: "bottom-right",
       autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
       theme: "colored",
     });
+
+    // Redirect to billing page
+    navigate("/billing");
   };
 
-  // removing product from cart
+  // Remove product from cart
   const removeItem = (item) => {
     setCartItem(cartItem.filter((singleItem) => singleItem.id !== item.id));
     toast.warn("Product removed from Cart !", {
       position: "bottom-right",
       autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
       theme: "colored",
     });
   };
+
   return (
     <>
       <BuyNow addInCart={addInCart} />
